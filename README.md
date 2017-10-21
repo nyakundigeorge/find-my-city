@@ -1,26 +1,35 @@
-This is a starter template for [Ionic](http://ionicframework.com/docs/) projects.
+# Find my City
 
-## How to use this template
+Super simple Ionic v3 app that demostrate the use of SQL Lite and Gelocation/Google Maps plugin.
 
-*This template does not work on its own*. The shared files for each starter are found in the [ionic2-app-base repo](https://github.com/ionic-team/ionic2-app-base).
+### Features
+- Shows the place where the phone is
+- Show the distance from Jardim Botânico - Curitiba - BR
 
-To use this template, either create a new ionic project using the ionic node.js utility, or copy the files from this repository into the [Starter App Base](https://github.com/ionic-team/ionic2-app-base).
+### Technologies
 
-### With the Ionic CLI:
+- Ionic Angular V3
+- Angular v4.4.3
+- SQL Lite native plugin
+- Google Maps v2 Native Plugin
 
-Take the name after `ionic2-starter-`, and that is the name of the template to be used when using the `ionic start` command below:
+
+### How to run
 
 ```bash
 $ sudo npm install -g ionic cordova
-$ ionic start myTabs tabs
+$ sudo npm install
 ```
 
-Then, to run it, cd into `myTabs` and run:
+Then, to run it, on IOS run:
 
 ```bash
 $ ionic cordova platform add ios
 $ ionic cordova run ios
 ```
 
-Substitute ios for android if not on a Mac.
+To run it on Android just run:
 
+```bash
+$ ionic cordova run android
+```
