@@ -4,7 +4,7 @@ Super simple Ionic v3 app that demostrate the use of SQL Lite and Gelocation/Goo
 
 ### Features
 - Shows the place where the phone is
-- Show the distance from Jardim Botânico - Curitiba - BR
+- Shows the distance from Jardim Botânico - Curitiba - BR
 
 ### Technologies
 
