@@ -1,17 +1,28 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Encontre minha Cidade</ion-title>
   </ion-navbar>
 </ion-header>
-
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <fmc-google-map height="60%" (init)="onMapInit($event)"></fmc-google-map>
+  <ion-list>
+    <button ion-button class="button button-block button-positive" (click)="geolocate()">
+      Mostre onde estou
+    </button>
+    <ion-card *ngIf="myLocation">
+      <ion-item (click)="centerPoint(myLocation)">
+        <ion-icon name="home" item-start large></ion-icon>
+        <h2>{{myLocation.name}}</h2>
+        <p *ngIf="city">Código IBGE: {{ city.ibge }}</p>
+      </ion-item>
+
+      <ion-item (click)="centerPoint(jardimBotanico)">
+        <ion-icon name="ios-leaf" item-left large></ion-icon>
+        <h2>{{jardimBotanico.name}}</h2>
+        <p>{{km}} Quilômetros</p>
+      </ion-item>
+
+    </ion-card>
+  </ion-list>
+
 </ion-content>
