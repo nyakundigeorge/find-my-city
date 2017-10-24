@@ -19,7 +19,7 @@ export class HomePage {
     name: 'Jardim Botânico', latitude: -25.442045, longitude: -49.241398
   };
   city: City;
-  km;
+  distance; number;
   myLocation: ILocation;
 
   constructor(public navCtrl: NavController,
@@ -74,7 +74,7 @@ export class HomePage {
     this.fmcGoogleMap.drawLine(coords.latitude, coords.longitude, this.jardimBotanico.latitude, this.jardimBotanico.longitude)
 
     let km = this.fmcGoogleMap.computeDistanceBetween(coords.latitude, coords.longitude, this.jardimBotanico.latitude, this.jardimBotanico.longitude);
-    this.km = Math.round(km * 100) / 100;
+    this.distance = Math.round(km * 100) / 100;
   }
 
   onMapInit() {
