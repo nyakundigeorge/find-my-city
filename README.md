@@ -13,6 +13,15 @@ Super simple Ionic v3 app that demostrate the use of SQL Lite and Gelocation/Goo
 - SQL Lite native plugin
 - Google Maps v2 Native Plugin
 
+### Set your own Google Maps API KEY in config.xml
+
+
+```xml
+    <plugin name="cordova-plugin-googlemaps" spec="2.0.11">
+        <variable name="API_KEY_FOR_ANDROID" value="KEY" />
+        <variable name="API_KEY_FOR_IOS" value="KEY" />
+    </plugin>
+```
 
 ### How to run
 
